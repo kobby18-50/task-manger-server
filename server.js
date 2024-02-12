@@ -13,6 +13,7 @@ import 'express-async-errors'
 // routes
 import taskRouter from './routes/taskRoutes.js'
 import authRouter from './routes/authRoutes.js'
+import userRouter from './routes/userRoutes.js'
 
 
 
@@ -38,6 +39,9 @@ app.use('/api/v1/task', taskRouter)
 
 // auth router
 app.use('/api/v1/auth', authRouter)
+
+// user router
+app.use('/api/v1/user', userRouter)
 
 // middlware
 app.use(notFoundMiddleWare)
